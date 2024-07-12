@@ -27,6 +27,7 @@ def is_nighttime():
     now = datetime.now().strftime("%H:%M")
     return False if sunrise < now < sunset else True
 
+
 def check_iss():
     """ Return the ISS's current position """
     response = requests.get(url="http://api.open-notify.org/iss-now.json")
